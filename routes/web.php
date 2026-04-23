@@ -18,3 +18,6 @@ Route::get('/', function () {
 });
 use App\Http\Controllers\ProdukController;
 Route::get('/produk', [ProdukController::class, 'index']);
+Route::get('/produk/create', [ProdukController::class, 'create']);
+Route::post('/produk/store', [ProdukController::class, 'store']);
+Route::delete('/produk/{id}', [ProdukController::class, 'destroy']);

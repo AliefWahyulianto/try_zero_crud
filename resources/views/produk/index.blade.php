@@ -3,14 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Data Produk</title>
+    <title>Data Barang</title>
 </head>
-<body>
-    <h1>Data Produk</h1>
-    <a href="/produk/create">Tambah Produk</a>
 
-    <table border ="1">
+<body>
+    <h1>Data Barang</h1>
+    <a href="/produk/create">Tambah Produk</a>
+    <table border=1>
         <tr>
+            
             <th>ID</th>
             <th>Nama Barang</th>
             <th>Harga</th>
@@ -25,13 +26,13 @@
             <td>{{$item->stok}}</td>
             <td>
                 <a href="/produk/{{$item->id}}/edit">Edit</a>
-                <form action="/produk{{$item->id}}" method="POST">
+                <form action="/produk/{{$item->id}}" method='POST'>
                     @csrf
-                    @method('DELETE')
+                    @method ('DELETE')
                     <button type="submit">Hapus</button>
                 </form>
             </td>
-        </tr>]
+        </tr>
         @endforeach
     </table>
 </body>
