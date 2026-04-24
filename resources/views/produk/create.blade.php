@@ -6,19 +6,19 @@
     <title>Tambah Barang</title>
 </head>
 <body>
-<h1>Tambah barang</h1>
-<form action="/produk/store" method = 'POST'>
-    @csrf
-    <label>Nama barang</label>
-    <input type="text" name=nama_barang>
-    <br><br>
-    <label>Harga</label>
-    <input type="number" name=harga>
-    <br><br>
-    <label>Stok</label>
-    <input type="number" name=stok>
-    <br><br>
-    <button type="submit">Simpan</button>
-</form>
+    <h1>Tambah Barang</h1>
+    <form action="/produk/store" method = "POST">
+        @csrf
+        <label>Nama Barang</label>
+        <input type="text" name="nama_barang" id="">
+        <br><br>
+        <label>Harga</label>
+        <input type="number" name="harga" id="">
+        <br><br>
+        <label>Stok</label>
+        <input type="number" name="stok" id="">
+
+        <button type="submit">Simpan</button>
+    </form>
 </body>
 </html>

@@ -10,4 +10,5 @@ class Produk extends Model
     use HasFactory;
     protected $table ='produk';
     protected $fillable = ['nama_barang', 'harga', 'stok'];
+
 }

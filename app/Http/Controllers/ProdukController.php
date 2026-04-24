@@ -10,7 +10,7 @@ class ProdukController extends Controller
     public function index()
     {
         $produk = Produk::all();
-        return view ('produk.index', compact('produk')) ;
+        return view ('produk.index', compact('produk')); 
     }
     public function create()
     {
@@ -19,15 +19,10 @@ class ProdukController extends Controller
     public function store(Request $request)
     {
         Produk::create([
-            'nama_barang' =>$request->nama_barang,
-            'harga' =>$request->harga,
-            'stok' =>$request->stok,
+            'nama_barang' => $request->nama_barang,
+            'harga' => $request->harga,
+            'stok' => $request->stok,
         ]);
-        return redirect ('produk');
-    }
-    public function destroy($id)
-    {
-        Produk::destroy($id);
         return redirect ('/produk');
     }
 }
